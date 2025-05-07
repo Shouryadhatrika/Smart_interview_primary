@@ -1,7 +1,6 @@
 # 📘 Smart Interviews - Primary | Problem Solutions
 # ABOUT.
-
-![Python](https://img.shields.io/github/languages/top/Shouryadhatrika/smart-interviews-primary)
+LANGUAGE:[PYTHON](https://camo.githubusercontent.com/881f92421018bad3d499e11e36f02d932b24550e8c0ba11a4acd37d880526095/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d3337373641423f7374796c653d666c6174266c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465)
 
 This repository contains my curated solutions to the **Smart Interviews Primary** problems from [SmartInterviews Hive](https://hive.smartinterviews.in/contests/smart-interviews-primary/problems), solved under the username [`Shaurya_Dhatrika`](https://hive.smartinterviews.in/profile/Shaurya_Dhatrika).
 
