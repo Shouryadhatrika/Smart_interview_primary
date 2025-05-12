@@ -55,3 +55,21 @@ Output
 Explanation
 
 Self Explanatory'''
+
+def sub(arr,temp,idx):
+    if(temp!=None and temp!=[]):
+        print(*temp)
+    for i in range(idx,len(arr)):
+        temp.append(arr[i])
+        sub(arr,temp,i+1)
+        temp.pop()
+    return
+def subset(A):
+    temp=[]  
+    sub(A,temp,0)
+for _ in range(int(input())) :
+    n=int(input())
+    arr=list(map(int,input().split()))
+    arr.sort()
+    subset(arr)
+    print()
