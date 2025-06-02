@@ -1,0 +1,63 @@
+'''Prime Love 
+Lisa and Joey love prime numbers that don't contain 0 and they should remain prime after removing digits from the beginning. For example, they adore 3797 since 797, 97, and 7 are also prime. Your job is to find out the number of primes not greater than N, meeting Lisa and Joey's criteria.
+
+Input Format
+The first line of input contains T - the number of test cases. It's followed by T lines, each line containing a single number - N.
+
+Output Format
+For each test case, print the number of primes not greater than N, that Lisa and Joey love, separated by a new line.
+
+Constraints
+10 points
+1 <= T <= 103
+1 <= N <= 103
+
+40 points
+1 <= T <= 104
+1 <= N <= 104
+
+100 points
+1 <= T <= 106
+1 <= N <= 106
+
+Example
+Input
+3
+30
+100
+5
+
+Output
+7
+15
+3
+
+Explanation
+
+Example 1:
+Primes in [1, 30] are {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}.
+11, 19, and 29, after removing the leading digits, will not be prime. All other primes are loved by Lisa and Joey.'''
+n=10**6+1
+primes=[0,0]+[1]*(n-2)
+for i in range(2,int(n**0.5)+1):
+    if primes[i]:
+        for j in range(i*i,n,i):
+            primes[j]=0
+def f(x):
+    s=str(x)
+    if "0" in s:
+        return False
+    for i in range(len(s)):
+        if not primes[int(s[i:])]:
+            return False
+    return True
+special=[0]*n
+for i in range(2,n):
+    if primes[i] and f(i):
+        special[i]=1
+ps=[0]*n
+for i in range(1,n):
+    ps[i]=ps[i-1]+special[i]
+for _ in range(int(input())):
+    n=int(input())
+    print(ps[n])
